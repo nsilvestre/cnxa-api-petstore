@@ -41,4 +41,12 @@ The test suite includes both positive and negative scenarios, covering:
 
 ---
 
+## Possible Enhancement Opportunities
+
+It's likely that there are improvement opportunities in this project, some of which could be:
+
+- Add a Logger for better debugging and traceability of test runs.
+- Add retry logic for flaky tests or network issues.
+- Improve error messages and assertions for easier troubleshooting.
+
 Feel free to contribute or adapt this suite for your own API testing needs!
