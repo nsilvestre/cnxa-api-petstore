@@ -22,6 +22,8 @@ The test suite includes both positive and negative scenarios, covering:
 
 > **Note:** For demonstration purposes and to keep the solution simple, not all validations are applied to every test. For example, schema validation is not present in all tests. In a real project, it is recommended to apply the same validation criteria to all tests for consistency and reliability.
 
+> **Important:** Since this is a public API and some tests use existing data, tests may occasionally fail if someone else updates or deletes that data. This is a limitation of testing against shared, mutable resources in public environments.
+
 ## How to Run the Tests Locally
 
 1. **Install dependencies:**
