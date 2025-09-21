@@ -1,6 +1,9 @@
 import { APIRequestContext } from "@playwright/test";
 import { BASE_URL } from "../constants/constants.ts"; 
-import { getDefaultAutoSelectFamilyAttemptTimeout } from "net";
+import dotenv from 'dotenv';
+
+//todo: update every client to create the APIRequestContext from request.createContext() instead of using DI in the constructor
+dotenv.config();
 
 export class PetClient{
     constructor(private request: APIRequestContext) {}
@@ -54,7 +57,7 @@ export class PetClient{
         const response = await this.request.delete(`${BASE_URL}/pet/${petId}`, {
             headers: {
                 'Accept': 'application/json',
-                'api_key': 'special-key'
+                'api_key': process.env.PETSTORE_API_KEY || ''
             }
         });
 
